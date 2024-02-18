@@ -3,14 +3,14 @@ const noteId = urlParams.get('noteId');
 
 console.log(noteId);
 
-const updateNoteButton = document.querySelector(".update-note-button");
+const updateNoteButton = document.querySelector(".create-note-button");
 
-const apiUrl = "https://aasf-final-project-backend.herokuapp.com";
+const apiUrl = "https://notetaker-backend-connect.onrender.com";
 const token = localStorage.getItem("jwt");
 
 updateNoteButton.addEventListener("click", ()=> {
     const content = document.querySelector('.create-note-input').value;
-    const heading = document.querySelector("create-note-heading").value;
+    const heading = document.querySelector(".create-note-heading").value;
 
     if(token){
         fetch(`${apiUrl}/note/update/${noteId}`, {

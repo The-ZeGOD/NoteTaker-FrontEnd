@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 
-const apiUrl = "https://aasf-final-project-backend.herokuapp.com";
+const apiUrl = "https://notetaker-backend-connect.onrender.com";
 
 window.addEventListener("load", () => {
     body.classList.add("visible");
@@ -32,11 +32,12 @@ signInForm.addEventListener("submit", (event) => {
             location.href = "/pages/dashboard/dashboard.html";
         } else {
             alert("SignIn Again");
+            location.href = "/pages/signInsignUp/authenticate.html";
         }
     })
     .catch((err) => {
         alert("Error Signing In!!! Re-try....");
-        console.log(err);
+        location.href = "/pages/signInsignUp/authenticate.html";
     });
 });
 
